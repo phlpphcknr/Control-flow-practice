@@ -11,9 +11,11 @@ public class ForLoopTest {
     @MethodSource
     public void facultyTest(int num, int expectedResult){
         //WHEN
-        int result = ForLoopApp.facultyRec(num);
+        int resultR = ForLoopApp.facultyRec(num);
+        int resultW = ForLoopApp.faculty(num);
         //THEN
-        assertEquals(result, expectedResult);
+        assertEquals(resultR, expectedResult);
+        assertEquals(resultW, expectedResult);
     }
     private static Stream <Arguments> facultyTest(){
         return Stream.of(
